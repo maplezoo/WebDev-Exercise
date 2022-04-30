@@ -1,0 +1,182 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+button {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 900;
+}
+
+p {
+  color: #afafaf;
+}
+
+/* Headings */
+.big-heading{
+  font-size: 3.5rem;
+  line-height: 2;
+}
+
+.section-heading {
+  font-size: 2.5rem;
+  line-height: 1.5;
+}
+
+/* Container */
+
+.container-fluid {
+  padding: 7% 15%;
+  overflow: hidden;
+}
+
+/* Section */
+.color-section {
+  background-color: #ff4c68;
+  color: #fff;
+}
+
+.white-section {
+  background-color: #fff;
+}
+
+/* navigation Bar */
+
+.navbar {
+  padding-bottom: 50px;
+}
+
+.navbar-brand {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.nav-item {
+  padding: 0 20px;
+}
+
+.nav-link {
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+/* Title Section */
+
+#title .container-fluid {
+  padding: 3% 15% 7%;
+}
+.title-image {
+  width: 22%;
+  transform: rotate(20deg);
+  position: absolute;
+  right: 25%;
+}
+
+/* dowload buttons */
+.download-btn {
+  margin: 5% 3% 5% 0;
+}
+
+
+/* Features Section */
+#features {
+  position: relative;
+  z-index: 1;
+}
+
+.feature-box {
+  padding: 5%;
+}
+
+/* icon color */
+.icon {
+  color: #ef8172;
+  margin-bottom: 1rem;
+}
+
+.icon:hover {
+  color: #ff4c68;
+}
+
+.middle-text {
+  margin: 5% auto;
+}
+
+/* Testimonials Section */
+#testimonials {
+  background-color: #ef8172;
+}
+
+.testimonial-img {
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+.testimonial-text {
+  font-size: 2.5rem;
+  line-height: 1.5;
+}
+
+/* press section */
+#press {
+  background-color: #ef8172;
+  padding-bottom: 3%;
+}
+
+.press-logo {
+  width: 15%;
+  margin: 20px 20px 50px;
+}
+
+/* pricing sction */
+
+.pricing-title {
+  font-size: 2.5rem;
+  line-height: 1.5;
+}
+
+/* call to action */
+
+.cta-title {
+  font-size: 2.5rem;
+  line-height: 1.5;
+}
+
+.cta-btn {
+  margin: 7% 3%;
+}
+
+/* footer */
+#footer {
+  margin-top: 50px;
+}
+
+.footer-logo {
+  padding: 3% 1%;
+}
+
+/* media query breakpoint */
+@media (max-width:1283px) and (min-width:991px) {
+  .title-image {
+    width: 30%;
+    right: 15%;
+    top: 20%;
+  }
+}
+
+@media (max-width: 991px) {
+  .title-image {
+    width: 70%;
+    transform: rotate(0deg);
+    position: static;
+  }
+
+  #title {
+    text-align: center;
+  }
+}
