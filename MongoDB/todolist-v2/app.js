@@ -11,7 +11,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://maple:zf123123@webdevexercise.bk5lv.mongodb.net/todolistDB");
+mongoose.connect("mongodb+srv://maple:<password>@webdevexercise.bk5lv.mongodb.net/todolistDB");
 
 
 const listSchema = new mongoose.Schema({todo: String});
