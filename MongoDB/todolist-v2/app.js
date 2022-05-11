@@ -1,5 +1,5 @@
 //jshint esversion:6
-
+require('dotenv').config()
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
@@ -11,7 +11,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://maple:<password>@webdevexercise.bk5lv.mongodb.net/todolistDB");
+mongoose.connect("mongodb+srv://maple:" + process.env.MONGO_PASSWORD + "@webdevexercise.bk5lv.mongodb.net/todolistDB");
 
 
 const listSchema = new mongoose.Schema({todo: String});
