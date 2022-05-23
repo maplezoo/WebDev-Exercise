@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import TodoItem from "./TodoItem";
+import InputArea from "./InputArea";
 
 function App() {
     const [todo, setTodo] = useState(["A Item", "Second"]);
     const [input, setInput] = useState("");
 
-    function logTyping(e) {
+    function handleChange(e) {
         const newTodo = e.target.value;
         setInput(newTodo);
     }
 
-    function addTodo() {
+    function addItem() {
         setTodo((p) => {
             return [...p, input];
         });
@@ -30,12 +31,7 @@ function App() {
             <div className="heading">
                 <h1>To-Do List</h1>
             </div>
-            <div className="form">
-                <input onChange={logTyping} type="text" value={input} />
-                <button onClick={addTodo}>
-                    <span>Add</span>
-                </button>
-            </div>
+            <InputArea handleChange={handleChange} value={input} addItem={addItem} />
             <div>
                 <ul>
                     {todo.map((e, idx) => (
