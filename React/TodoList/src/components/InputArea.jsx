@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 
 function InputArea(props) {
+    const [input, setInput] = useState("");
+
+    function handleChange(e) {
+        const newTodo = e.target.value;
+        setInput(newTodo);
+    }
+
+    function addItem(inputText) {
+        props.setTodo((p) => {
+            return [...p, inputText];
+        });
+        setInput("");
+    }
+
     return (
         <div className="form">
-            <input onChange={props.handleChange} type="text" value={props.value} />
-            <button onClick={props.addItem}>
+            <input onChange={handleChange} type="text" value={input} />
+            <button onClick={() => addItem(input)}>
                 <span>Add</span>
             </button>
         </div>
